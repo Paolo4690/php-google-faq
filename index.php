@@ -30,10 +30,10 @@ $google_faq = [
         'answer' => '
         <p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:</p>
         <br>
-        <ol>
+        <ol class="first-list">
         <li>
             La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-            <ol>
+            <ol class="second-list">
                 <li>
                     Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.
                 </li>
@@ -74,14 +74,48 @@ $google_faq = [
 ?>
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/google_64x64.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Domande frequenti</title>
 </head>
+
 <body>
-    <?php
+
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <figure>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png">
+                </figure>
+                <h2>Privacy e termini</h2>
+            </div>
+            <div class="tools">
+                <i class="fas fa-th"></i>
+                <div class="avatar">
+                    <img src="img/paolo_calafiore.png" alt="">
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li>Introduzione</li>
+            <li>Norme sulla privacy</li>
+            <li>Termini di servizio</li>
+            <li>Tecnologie</li>
+            <li class="active">Domande frequenti</li>
+        </ul>
+    </header>
+
+    <main>
+        <?php
         foreach ($google_faq as $element) {
         ?>
 
@@ -92,6 +126,33 @@ $google_faq = [
 
         <?php
         }
-    ?>
+        ?>
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div class="link-wrapper">
+                <span class="link">Google</span>
+                <span class="dot">﹒</span>
+                <span class="link">Tutto su Google</span>
+                <span class="dot">﹒</span>
+                <span class="link">Privacy</span>
+                <span class="dot">﹒</span>
+                <span class="link">Termini</span>
+            </div>
+            <div class="language">
+                <i class="fas fa-language"></i>
+                <select class="language-selection">
+                    <option value="it" selected>Italiano</option>
+                    <option value="en">Inglese</option>
+                    <option value="fr">Francese</option>
+                    <option value="de">Tedesco</option>
+                    <option value="es">Spagnolo</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
